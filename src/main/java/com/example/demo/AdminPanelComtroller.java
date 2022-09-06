@@ -13,11 +13,11 @@ public class AdminPanelComtroller {
 	
 	@RequestMapping("/products")
 	public String products() {
-		return "products";
+		return "admin/products";
 	}
 	
 	@RequestMapping("/products/addProduct")
 	public String addProduct() {
-		return "addProductForm";
+		return "admin/addProductForm";
 	}
 }

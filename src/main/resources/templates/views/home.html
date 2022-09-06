@@ -242,7 +242,7 @@
     <!-- Carousel End -->
 
 
-    <!-- Featured Start -->
+    <!-- Features Start -->
     <div class="container-fluid pt-5" th:fragment="features">
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
@@ -271,7 +271,7 @@
             </div>
         </div>
     </div>
-    <!-- Featured End -->
+    <!-- Features End -->
 
 
     <!-- Categories Start -->
@@ -439,8 +439,8 @@
     <!-- Categories End -->
 
 
-    <!-- Products Start -->
-    <div class="container-fluid pt-5 pb-3" th:fragment="products">
+    <!-- featured Products Start -->
+    <div class="container-fluid pt-5 pb-3" th:fragment="featuredProducts">
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Featured Products</span></h2>
         <div class="row px-xl-5">
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
@@ -661,7 +661,7 @@
             </div>
         </div>
     </div>
-    <!-- Products End -->
+    <!--featured  Products End -->
 
 
     <!-- Offer Start -->
@@ -692,8 +692,8 @@
     <!-- Offer End -->
 
 
-    <!-- Products Start -->
-    <div class="container-fluid pt-5 pb-3">
+    <!-- Recent Products Start -->
+    <div class="container-fluid pt-5 pb-3" th:fragment="recentProducts">
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent Products</span></h2>
         <div class="row px-xl-5">
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
@@ -914,11 +914,11 @@
             </div>
         </div>
     </div>
-    <!-- Products End -->
+    <!--Recent  Products End -->
 
 
     <!-- Vendor Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" th:fragment="vendors">
         <div class="row px-xl-5">
             <div class="col">
                 <div class="owl-carousel vendor-carousel">
@@ -954,7 +954,7 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
+    <div class="container-fluid bg-dark text-secondary mt-5 pt-5" th:fragment="footer">
         <div class="row px-xl-5 pt-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
                 <h5 class="text-secondary text-uppercase mb-4">Get In Touch</h5>
@@ -1021,12 +1021,13 @@
                 <img class="img-fluid" src="img/payments.png" alt="">
             </div>
         </div>
+         <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
     </div>
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+   
 
 
     <footer th:fragment="foot">
