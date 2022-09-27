@@ -62,7 +62,7 @@ public class ProductCategory {
 
 	@Override
 	public String toString() {
-		return "ProductCategory [id=" + id + ", categoryName=" + categoryName + ", products=" + products + "]";
+		return "ProductCategory [id=" + id + ", categoryName=" + categoryName + "]";
 	}
 	
     

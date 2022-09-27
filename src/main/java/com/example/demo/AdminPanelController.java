@@ -26,7 +26,7 @@ import com.example.demo.model.repos.ProductRepository;
 
 @Controller
 @RequestMapping("/admin")
-public class AdminPanelComtroller {
+public class AdminPanelController {
 	@Autowired
 	ProductRepository productRepo;
 	
@@ -61,18 +61,18 @@ public class AdminPanelComtroller {
 							@RequestParam("active") String active,
 							@RequestParam("unitsInStock") int unitsInStock
 			) throws IOException {
-	
-		String destination =  new ClassPathResource("/static/img").getFile().getAbsolutePath();
-		Files.copy(image.getInputStream(), Paths.get(destination+File.separator+image.getOriginalFilename()));
+		ProductCategory category = categoryRepo.findById(categoryId).get();
+		String destination =  new ClassPathResource("/static/assets/images/products").getFile().getAbsolutePath();
+		Files.copy(image.getInputStream(), Paths.get(destination+"/"+category.getCategoryName().toLowerCase().replaceAll("\\s", "")+File.separator+image.getOriginalFilename()));
 		//System.out.println(categoryId);
 		
 		Product product = new Product(
-					categoryRepo.findById(categoryId).get(),
+					category,
 					sku,
 					name,
 					description,
 					price,
-					"static/img/"+image.getOriginalFilename(),
+					"assets/images/products/"+category.getCategoryName().toLowerCase().replaceAll("\\s", "")+"/"+image.getOriginalFilename(),
 					active.equalsIgnoreCase("true"),
 					unitsInStock
 				);
