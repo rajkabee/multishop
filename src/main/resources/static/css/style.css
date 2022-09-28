@@ -9726,13 +9726,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 .shopping-cart {
-	display:none;
-	  margin: 20px 0;
+	  display:none;
 	  float: right;
 	  background: white;
 	  width: 320px;
 	  position: relative;
-	  left:500px;
+	  left:550px;
 	  border-radius: 3px;
 	  padding: 20px;
 	  z-index:1;
@@ -9818,4 +9817,8 @@ a.text-dark:hover, a.text-dark:focus {
   content: "";
   display: table;
   clear: both;
+}
+img.inCart{
+	height: 50px;
+	
 }

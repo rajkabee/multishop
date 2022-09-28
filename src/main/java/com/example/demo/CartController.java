@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -22,4 +23,17 @@ public class CartController {
 		model.addAttribute("productsInCart", productsInCart);
 		return "redirect:/";
 	}
+	@RequestMapping("removeFromCart/{id}")
+	public String removeFromCart(@PathVariable long id, HttpSession session) {
+		List<Long> cart = (List<Long>) session.getAttribute("productsInCart");
+		List<Long> newCart = new ArrayList<Long>();
+ 		for(Long i:cart) {
+			if(i!=id) {
+				newCart.add(i);
+			}
+		}
+		session.setAttribute("productsInCart", newCart);
+		return "redirect:/cart";
+	}
+	
 }
